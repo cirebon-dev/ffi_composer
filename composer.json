@@ -1,0 +1,19 @@
+{
+   "require": {
+      "php": "^7.4",
+      "ext-ffi": "*"
+   },
+   "autoload": {
+      "psr-4": {
+         "Contoh\\": "src/"
+      }
+   },
+   "scripts": {
+      "compile": [
+         "gcc -shared -o src/contoh.so src/contoh.c"
+      ],
+      "pre-autoload-dump": [
+         "@compile"
+      ]
+   }
+}
